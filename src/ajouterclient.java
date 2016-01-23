@@ -3,48 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GestionDeBanque;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
-import javax.swing.Timer;
 
 /**
  *
- * @author thamer
+ * @author Ahmed
  */
-public class ProgressBar extends javax.swing.JFrame {
+public class ajouterclient extends javax.swing.JFrame {
 
     /**
-     * Creates new form Bar
+     * Creates new form ajouterclient
      */
-    private Timer t = null ;
-    private int count = 0 ;
-    
-    public ProgressBar() {
-        
+    public ajouterclient() {
         initComponents();
-        t = new Timer (50 , new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               count ++ ;
-               bar1.setValue(count);
-               if(bar1.getValue()==100)
-        {
-            bar1.setValue( bar1.getValue() +1 );
-            JOptionPane.showMessageDialog(null ,"download done");
-            t.stop();
-            System.exit(0);
-            
-        }
-               
-
-
-            }
-        } );
-        t.start();
     }
 
     /**
@@ -56,21 +26,20 @@ public class ProgressBar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bar1 = new javax.swing.JProgressBar();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("progress barr");
-        setBackground(new java.awt.Color(0, 153, 204));
-        setMinimumSize(new java.awt.Dimension(400, 120));
-        getContentPane().setLayout(null);
 
-        bar1.setBackground(new java.awt.Color(0, 102, 255));
-        bar1.setStringPainted(true);
-        getContentPane().add(bar1);
-        bar1.setBounds(40, 20, 307, 39);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -90,26 +59,24 @@ public class ProgressBar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ProgressBar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ajouterclient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ProgressBar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ajouterclient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ProgressBar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ajouterclient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ProgressBar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ajouterclient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ProgressBar().setVisible(true);
+                new ajouterclient().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar bar1;
     // End of variables declaration//GEN-END:variables
 }
